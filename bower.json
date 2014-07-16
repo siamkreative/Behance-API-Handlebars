@@ -1,0 +1,27 @@
+{
+  "name": "Using Behance API with Handlebars",
+  "version": "1.0.0",
+  "authors": [
+    "Julien Vernet <julien@vernet.me>"
+  ],
+  "description": "Create a portfolio page using Behance API, jQuery, Handlebars and Preboot.less",
+  "main": "index.html",
+  "keywords": [
+    "behance",
+    "api",
+    "jquery",
+    "handlebars",
+    "html5",
+    "css3",
+    "less",
+    "preboot.less"
+  ],
+  "license": "MIT",
+  "homepage": "http://themeavenue.net",
+  "private": true,
+  "dependencies": {
+    "animate.css": "~3.1.1",
+    "handlebars": "~1.3.0",
+    "preboot": "*"
+  }
+}
