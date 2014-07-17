@@ -3,11 +3,11 @@ $(function () {
 	// Get your Behance API Key here:
 	// https://www.behance.net/dev
 
-	var apiKey = 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX',
-		userID = 'behance_username',
-		behanceUserAPI = 'http://www.behance.net/v2/users/' + userID + '?callback=?&api_key=' + apiKey,
-		perPage = 12,
-		behanceProjectAPI = 'http://www.behance.net/v2/users/' + userID + '/projects?callback=?&api_key=' + apiKey + '&per_page=' + perPage;
+	var beUsername = 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX',
+		beApiKey = 'your_behance_username',
+		beUserAPI = 'http://www.behance.net/v2/users/' + beUsername + '?callback=?&api_key=' + beApiKey,
+		bePerPage = 12,
+		beProjectAPI = 'http://www.behance.net/v2/users/' + beUsername + '/projects?callback=?&api_key=' + beApiKey + '&per_page=' + bePerPage;
 
 	////////////////////////
 	// Behance User data //
@@ -26,7 +26,7 @@ $(function () {
 	} else {
 		// Load JSON-encoded data from the Behance API using a GET HTTP request.
 		// Store it in sessionStorage
-		$.getJSON(behanceUserAPI, function (user) {
+		$.getJSON(beUserAPI, function (user) {
 			sessionStorage.setItem('behanceUser', JSON.stringify(user));
 			setUserTemplate();
 		});
@@ -49,7 +49,7 @@ $(function () {
 	} else {
 		// Load JSON-encoded data from the Behance API using a GET HTTP request.
 		// Store it in sessionStorage
-		$.getJSON(behanceProjectAPI, function (project) {
+		$.getJSON(beProjectAPI, function (project) {
 			sessionStorage.setItem('behanceProject', JSON.stringify(project));
 			setPortfolioTemplate();
 		});
