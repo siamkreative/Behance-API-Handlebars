@@ -44,7 +44,7 @@ $(function () {
 			template = Handlebars.compile(getTemplate),
 			result = template(projectData);
 		$('#portfolio').html(result);
-		$('#portfolio .loading').remove();
+		$('.wrapper').removeClass('loading');
 	}
 	if (sessionStorage.getItem('behanceProject')) {
 		setPortfolioTemplate();
