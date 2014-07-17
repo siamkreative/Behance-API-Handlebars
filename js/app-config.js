@@ -20,6 +20,7 @@ $(function () {
 			template = Handlebars.compile(getTemplate),
 			result = template(userData);
 		$('#header').html(result);
+		$('#header .loading').remove();
 	}
 	if (sessionStorage.getItem('behanceUser')) {
 		setUserTemplate();
@@ -43,6 +44,7 @@ $(function () {
 			template = Handlebars.compile(getTemplate),
 			result = template(projectData);
 		$('#portfolio').html(result);
+		$('#portfolio .loading').remove();
 	}
 	if (sessionStorage.getItem('behanceProject')) {
 		setPortfolioTemplate();

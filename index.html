@@ -13,7 +13,8 @@
 		<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 	<![endif]-->
 
-	<header id="header" class="portfolio-header clearfix">
+	<header id="header" class="portfolio-header">
+		<img class="loading" src="images/loading-spinning-bubbles.svg" width="64" height="64">
 		<script id="profile-template" type="text/x-handlebars-template">
 		<h1 class="profile-name"><img class="profile-avatar" src="{{user.images.[138]}}" alt="{{user.display_name}}"></h1>
 		<p class="profile-occupation lead">{{user.occupation}}</p>
@@ -29,10 +30,11 @@
 	</header>
 
 	<div class="container">
-		<div id="content" class="content-area clearfix">
-			<div id="portfolio" class="portfolio-area clearfix">      
+		<div id="content" class="content-area">
+			<div id="portfolio" class="portfolio-area">
+				<img class="loading" src="images/loading-spinning-bubbles.svg" width="64" height="64">
 				<script id="portfolio-template" type="text/x-handlebars-template">
-				<ul class="portfolio-list clearfix">
+				<ul class="portfolio-list">
 					{{#each projects}}
 					<li class="portfolio-item">
 						<div class="portfolio-content">
@@ -63,7 +65,7 @@
 		</div>
 	</div>
 
-	<footer id="footer" class="portfolio-footer clearfix">
+	<footer id="footer" class="portfolio-footer">
 		<div id="power" class="power-by">
 			<p>Powered by <a target="_blank" href="http://www.behance.net/" title="Behance">Behance</a>, <a target="_blank" href="http://handlebarsjs.com/">Handlebars</a> and <a target="_blank" href="http://jquery.com/">jQuery</a>.</p>
 			<ul class="social-profiles">

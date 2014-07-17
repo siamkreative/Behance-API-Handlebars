@@ -63,6 +63,12 @@ h1,h2,h3,h4,h5,h6 {
 		padding-right: 5px;
 	}
 }
+.loading {
+	padding: 2em 0;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
 
 ///////////////////
 // Buttons Mixin //
@@ -112,6 +118,7 @@ h1,h2,h3,h4,h5,h6 {
 ////////////
 .portfolio-header,
 .portfolio-footer {
+	.clearfix;
 	color: white;
 	background-color: @brand-primary;
 	text-align: center;
@@ -137,9 +144,17 @@ h1,h2,h3,h4,h5,h6 {
 // Portfolio //
 ///////////////
 .portfolio-area {
+	.clearfix;
 	padding: @grid-column-padding*2 0;
+
+	.loading {
+		background-color: @brand-primary;
+		padding: 2em;
+		border-radius: 50%;
+	}
 }
 .portfolio-list {
+	.clearfix;
 	list-style: none;
 	margin: 0;
 	padding: 0;
