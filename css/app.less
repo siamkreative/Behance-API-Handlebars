@@ -63,11 +63,14 @@ h1,h2,h3,h4,h5,h6 {
 		padding-right: 5px;
 	}
 }
-.loading {
+.loading-img {
 	padding: 2em 0;
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
+}
+.loading {
+	background: url('../images/loading-spinning-bubbles.svg') no-repeat 50% 50%;
 }
 
 ///////////////////
@@ -140,18 +143,26 @@ h1,h2,h3,h4,h5,h6 {
 	}
 }
 
+// Sticky footer
+html, body {
+	height: 100%;
+}
+.wrapper {
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin: 0 auto -150px;
+}
+.footer, .push {
+	height: 150px;
+}
+
 ///////////////
 // Portfolio //
 ///////////////
 .portfolio-area {
 	.clearfix;
 	padding: @grid-column-padding*2 0;
-
-	.loading {
-		background-color: @brand-primary;
-		padding: 2em;
-		border-radius: 50%;
-	}
 }
 .portfolio-list {
 	.clearfix;

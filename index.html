@@ -13,56 +13,61 @@
 		<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 	<![endif]-->
 
-	<header id="header" class="portfolio-header">
-		<img class="loading" src="images/loading-spinning-bubbles.svg" width="64" height="64">
-		<script id="profile-template" type="text/x-handlebars-template">
-		<h1 class="profile-name"><img class="profile-avatar" src="{{user.images.[138]}}" alt="{{user.display_name}}"></h1>
-		<p class="profile-occupation lead">{{user.occupation}}</p>
-		<div class="profile-fields">
-			<ul class="field-list">
-				{{#each user.fields}}
-				<li class="field-item">{{this}}</li>
-				{{/each}}
-			</ul>
-		</div>
-		<div class="profile-location fi-marker">{{user.city}}, {{user.country}}</div>
-		</script>
-	</header>
+	<div class="wrapper loading">
 
-	<div class="container">
-		<div id="content" class="content-area">
-			<div id="portfolio" class="portfolio-area">
-				<img class="loading" src="images/loading-spinning-bubbles.svg" width="64" height="64">
-				<script id="portfolio-template" type="text/x-handlebars-template">
-				<ul class="portfolio-list">
-					{{#each projects}}
-					<li class="portfolio-item">
-						<div class="portfolio-content">
-							<figure class="portfolio-cover" title="{{this.name}}">
-								{{#if this.covers.[404]}}
-								<img class="portfolio-image" src="{{this.covers.[404]}}" width="293" height="229" alt="">{{else}} {{#if this.covers.[230]}}
-								<img class="portfolio-image" src="{{this.covers.[230]}}" alt="">{{else}}
-								<img class="portfolio-image" src="{{this.covers.[202]}}" alt="">{{/if}} {{/if}}
-							</figure>
-							<div class="portfolio-infos">
-								<h2 class="portfolio-title">{{this.name}}</h2>
-								<div class="portfolio-date">{{dateFormat this.published_on}}</div>
-								<div class="portfolio-fields">
-									<ul class="field-list">
-										{{#each this.fields}}
-										<li class="field-item">{{this}}</li>
-										{{/each}}
-									</ul>
-									<a href="{{this.url}}" class="wpbe-btn" target="_blank">View details</a>
-								</div>
-							</div>
-						</div>
-					</li>
+		<header id="header" class="portfolio-header">
+			<img class="loading-img" src="images/loading-spinning-bubbles.svg" width="64" height="64">
+			<script id="profile-template" type="text/x-handlebars-template">
+			<h1 class="profile-name"><img class="profile-avatar" src="{{user.images.[138]}}" alt="{{user.display_name}}"></h1>
+			<p class="profile-occupation lead">{{user.occupation}}</p>
+			<div class="profile-fields">
+				<ul class="field-list">
+					{{#each user.fields}}
+					<li class="field-item">{{this}}</li>
 					{{/each}}
 				</ul>
-				</script>
+			</div>
+			<div class="profile-location fi-marker">{{user.city}}, {{user.country}}</div>
+			</script>
+		</header>
+
+		<div class="container">
+			<div id="content" class="content-area">
+				<div id="portfolio" class="portfolio-area">
+					<script id="portfolio-template" type="text/x-handlebars-template">
+					<ul class="portfolio-list">
+						{{#each projects}}
+						<li class="portfolio-item">
+							<div class="portfolio-content">
+								<figure class="portfolio-cover" title="{{this.name}}">
+									{{#if this.covers.[404]}}
+									<img class="portfolio-image" src="{{this.covers.[404]}}" width="293" height="229" alt="">{{else}} {{#if this.covers.[230]}}
+									<img class="portfolio-image" src="{{this.covers.[230]}}" alt="">{{else}}
+									<img class="portfolio-image" src="{{this.covers.[202]}}" alt="">{{/if}} {{/if}}
+								</figure>
+								<div class="portfolio-infos">
+									<h2 class="portfolio-title">{{this.name}}</h2>
+									<div class="portfolio-date">{{dateFormat this.published_on}}</div>
+									<div class="portfolio-fields">
+										<ul class="field-list">
+											{{#each this.fields}}
+											<li class="field-item">{{this}}</li>
+											{{/each}}
+										</ul>
+										<a href="{{this.url}}" class="wpbe-btn" target="_blank">View details</a>
+									</div>
+								</div>
+							</div>
+						</li>
+						{{/each}}
+					</ul>
+					</script>
+				</div>
 			</div>
 		</div>
+
+		<div class="push"></div>
+
 	</div>
 
 	<footer id="footer" class="portfolio-footer">
