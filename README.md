@@ -12,3 +12,9 @@ Create a portfolio page using the following:
 **Read the article [here](http://themeavenue.net/portfolio-behance-api-handlebars/).**
 
 *Feel free to comment, fork, submit issues! Please also check out the todo-list if you want to help improving this.*
+
+## Installation ##
+1. Clone (`git clone git@github.com:ThemeAvenue/Behance-API-Handlebars.git`) or Download the repo
+2. Install Bower dependencies with `bower install`
+3. Go to /js/app-config.js and replace with your Behance credentials *(line 6-7)*
+4. That's it!
