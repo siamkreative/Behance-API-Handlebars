@@ -30,8 +30,8 @@ $RECYCLE.BIN/
 sftp-config.json
 
 
-### Bower ###
-bower_components
-
-### Prepros ###
+### Custom ###
+bower_components/
+behance_secret.json
 prepros.json
+prepros.cfg
